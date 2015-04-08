@@ -1,0 +1,10 @@
+{% if category_list %}
+    <form action = "results/" method="get">
+	<p>Please select three categories</p>
+    {% for cat in category_list %}
+        <input type="checkbox" name="{{cat.id}}"> {{cat.name}}<br>
+	{% endfor %}   
+	<input type="submit" value="Submit">
+	</form>	
+	
+{% endif %}
